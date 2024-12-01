@@ -5,7 +5,6 @@
 @section('front-title', 'Project')
 
 @section('content')
-    @include('front.layouts.header')
 
     <!-- Projects Start -->
     <div class="container-xxl py-5">

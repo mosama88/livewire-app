@@ -20,13 +20,16 @@
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0">
 
+
             @include('front.layouts.navbar')
 
+
+            @include('front.layouts.header')
         </div>
         <!-- Navbar & Hero End -->
         @yield('content')
 
-       
+
 
 
         <!-- Footer Start -->
@@ -37,8 +40,7 @@
 
 
         <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i
-                class="bi bi-arrow-up"></i></a>
+        <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
 
 

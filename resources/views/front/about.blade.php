@@ -6,7 +6,6 @@
 
 
 @section('content')
-    @include('front.layouts.header')
 
     <!-- Feature Start -->
     <div class="container-xxl py-5">

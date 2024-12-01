@@ -5,7 +5,6 @@
 @section('front-title', 'Our Team')
 
 @section('content')
-    @include('front.layouts.header')
         
 
         <!-- Team Start -->

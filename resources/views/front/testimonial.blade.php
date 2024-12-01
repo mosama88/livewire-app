@@ -5,7 +5,6 @@
 @section('front-title', 'Testimonial')
 
 @section('content')
-    @include('front.layouts.header')
 
 
     <!-- Testimonial Start -->

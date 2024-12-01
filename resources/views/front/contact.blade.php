@@ -4,7 +4,6 @@
 @section('page-desc', 'Contact')
 @section('front-title', 'Contact')
 @section('content')
-    @include('front.layouts.header')
     <!-- Contact Start -->
     <div class="container-xxl py-5">
         <div class="container py-5 px-lg-5">

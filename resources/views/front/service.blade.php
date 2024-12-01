@@ -5,7 +5,6 @@
 @section('front-title', 'Service')
 
 @section('content')
-    @include('front.layouts.header')
 
 
         <!-- Service Start -->
