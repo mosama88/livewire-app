@@ -1,5 +1,6 @@
 @extends('front.layouts.master')
 @section('home-active','active')
+@section('front-title', 'Home')
 
 @section('content')
     <div class="container-xxl bg-primary hero-header">

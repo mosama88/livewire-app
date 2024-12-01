@@ -1,6 +1,9 @@
 @extends('front.layouts.master')
 @section('team-active','active')
 @section('page-head', 'Our Team')
+@section('page-desc', 'Our Team')
+@section('front-title', 'Our Team')
+
 @section('content')
     @include('front.layouts.header')
         

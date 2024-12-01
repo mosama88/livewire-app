@@ -1,6 +1,8 @@
 @extends('front.layouts.master')
 @section('contact-active', 'active')
 @section('page-head', 'Contact')
+@section('page-desc', 'Contact')
+@section('front-title', 'Contact')
 @section('content')
     @include('front.layouts.header')
     <!-- Contact Start -->

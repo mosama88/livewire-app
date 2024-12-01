@@ -1,6 +1,8 @@
 @extends('front.layouts.master')
 @section('service-active','active')
 @section('page-head', 'Service')
+@section('page-desc', 'Service')
+@section('front-title', 'Service')
 
 @section('content')
     @include('front.layouts.header')
