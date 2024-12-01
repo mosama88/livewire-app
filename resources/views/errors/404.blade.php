@@ -1,5 +1,6 @@
 @extends('front.layouts.master')
 @section('front-title', '404')
+@section('page-desc', '404')
 
 @section('content')
     @include('front.layouts.header')
