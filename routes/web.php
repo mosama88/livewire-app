@@ -35,9 +35,21 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('/')->name('front.')->group(function(){
 
+    // index
     Route::view('', 'front.index')->name('index');
     
+    // About
+    Route::view('/about', 'front.about')->name('about');
     
+    // Contact
+    Route::view('/contact', 'front.contact')->name('contact');
+
+        // Service
+        Route::view('/service', 'front.service')->name('service');
+
+        
+        // Project
+        Route::view('/project', 'front.project')->name('project');
 
 });
 
