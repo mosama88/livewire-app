@@ -44,12 +44,15 @@ Route::prefix('/')->name('front.')->group(function(){
     // Contact
     Route::view('/contact', 'front.contact')->name('contact');
 
-        // Service
-        Route::view('/service', 'front.service')->name('service');
+    // Service
+    Route::view('/service', 'front.service')->name('service');
 
-        
-        // Project
-        Route::view('/project', 'front.project')->name('project');
+    
+    // Project
+    Route::view('/project', 'front.project')->name('project');
+
+        // team
+        Route::view('/team', 'front.team')->name('team');
 
 });
 
