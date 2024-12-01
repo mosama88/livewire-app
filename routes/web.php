@@ -51,8 +51,11 @@ Route::prefix('/')->name('front.')->group(function(){
     // Project
     Route::view('/project', 'front.project')->name('project');
 
-        // team
+        // Team
         Route::view('/team', 'front.team')->name('team');
+
+        //Testimonial
+        Route::view('/testimonial', 'front.testimonial')->name('testimonial');
 
 });
 

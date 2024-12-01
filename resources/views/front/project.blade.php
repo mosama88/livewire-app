@@ -1,6 +1,6 @@
 @extends('front.layouts.master')
 @section('project-active', 'active')
-
+@section('page-head', 'Project')
 @section('content')
     @include('front.layouts.header')
 
