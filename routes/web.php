@@ -31,7 +31,12 @@ use Illuminate\Support\Facades\Route;
 //     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 // });
 
+Route::prefix('/dashboard/')->name('dashboard.')->group(function(){
 
+    // index
+    Route::view('index', 'dashboard.index')->name('dashboard.index');
+  
+});
 
 Route::prefix('/')->name('front.')->group(function(){
 
