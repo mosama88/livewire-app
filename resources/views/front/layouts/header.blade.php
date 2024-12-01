@@ -10,7 +10,8 @@
                         amet ipsum vero ipsum clita lorem</p>
                     <a href=""
                         class="btn btn-secondary py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">Read More</a>
-                    <a href="" class="btn btn-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact
+                    <a href="{{ route('front.contact') }}"
+                        class="btn btn-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact
                         Us</a>
                 </div>
                 <div class="col-lg-6 text-center text-lg-start">
