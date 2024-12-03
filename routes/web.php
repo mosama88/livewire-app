@@ -35,6 +35,8 @@ Route::prefix('/dashboard/')->name('dashboard.')->group(function(){
 
     // index
     Route::view('index', 'dashboard.index')->name('dashboard.index');
+    //Login
+    Route::view('login', 'dashboard.auth.login')->name('login');
   
 });
 
