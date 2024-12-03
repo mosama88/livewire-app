@@ -3,7 +3,6 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use Illuminate\Support\Facades\DB;
 
 return new class extends Migration
 {
@@ -12,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('admins', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
@@ -22,15 +21,13 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        DB::table('users')->insert([
+        DB::table('admins')->insert([
             [
-                'name' => 'Rasha Mosa',
-                'email' => 'rasha@hotmail.com',
+                'name' => 'Mohamed Osama',
+                'email' => 'mosama@hotmail.com',
                 'password' => Hash::make('password'), // Hashing the password
             ],
         ]);
-
-    
 
     }
 
@@ -39,6 +36,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('admins');
     }
 };
