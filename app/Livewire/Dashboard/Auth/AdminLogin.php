@@ -3,8 +3,9 @@
 namespace App\Livewire\Dashboard\Auth;
 
 use Livewire\Component;
-use Illuminate\Validation\ValidationException;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\ValidationException;
+use App\Http\Requests\Dashboard\AdminLoginRequest;
 
 class AdminLogin extends Component
 {
@@ -16,17 +17,12 @@ class AdminLogin extends Component
 
 
     public function rules(){
-        return[
-            'email'=>'required|string|email',
-            'password'=>'required',
-            'remember'=>'nullable',
-        ];
+        return(new AdminLoginRequest())->rules();
     }
 
-    // public function messages(){
-    //     return[
-    //         'email.required'=>'البريد الالكترونى مطلوب',
-    //     ];
+   
+    //  public function messages(){
+    //     return(new AdminLoginRequest())->messages();
     // }
     
     

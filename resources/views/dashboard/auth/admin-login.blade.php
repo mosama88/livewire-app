@@ -36,7 +36,15 @@
         </div>
     </div>
     <div class="mb-3">
-        <button class="btn btn-primary d-grid w-100" type="submit">Login</button>
+        <button class="btn btn-primary d-grid w-100 d-flex align-items-center justify-content-center" type="submit">
+            <div wire:loading.remove>
+                <span>Login</span>
+            </div>
+            <div class="spinner-border text-secondary ms-2" wire:loading wire:target="submit" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </button>
     </div>
+
 </form>
 {{-- End Form --}}
