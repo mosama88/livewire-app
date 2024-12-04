@@ -31,16 +31,7 @@ use Illuminate\Support\Facades\Route;
 //     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 // });
 
-Route::prefix('/dashboard/')->name('dashboard.')->group(function(){
-    Route::middleware(['admin'])->group(function () {
-    // index
-    Route::view('index', 'dashboard.index')->name('index');
-});
-    
-    //Login
-    Route::view('login', 'dashboard.auth.login')->name('login');
-  
-});
+
 
 Route::prefix('/')->name('front.')->group(function(){
 
