@@ -2,23 +2,23 @@
            <div class="row col-6">
                <div class="input-group mb-3">
                    <span class="input-group-text" id="inputGroup-sizing-default">Search</span>
-                   <input type="text" class="form-control" aria-label="Sizing example input"
+                   <input type="text" class="form-control" wire:model.live="search" aria-label="Sizing example input"
                        aria-describedby="inputGroup-sizing-default">
                </div>
            </div>
            <div class="text-nowrap">
-               <table class="table">
-                   <thead>
-                       <tr>
-                           <th>#</th>
-                           <th>Name</th>
-                           <th>Progress</th>
-                           <th>Actions</th>
-                       </tr>
-                   </thead>
-                   <tbody class="table-border-bottom-0">
+               @if (count($data) > 0)
+                   <table class="table">
+                       <thead>
+                           <tr>
+                               <th>#</th>
+                               <th>Name</th>
+                               <th>Progress</th>
+                               <th>Actions</th>
+                           </tr>
+                       </thead>
 
-                       @if (!empty($data) && isset($data))
+                       <tbody class="table-border-bottom-0">
                            <?php $i = 0; ?>
                            @foreach ($data as $info)
                                <?php $i++; ?>
@@ -47,10 +47,18 @@
                                    </td>
                                </tr>
                            @endforeach
-                       @else
-                           لا توجد بيانات
-                       @endif
-                   </tbody>
-               </table>
+
+                       </tbody>
+
+                   </table>
+               @else
+                   <div class="text-danger">
+                       Not Data Found
+                   </div>
+               @endif
+
+           </div>
+           <div class="row mt-2">
+               {{ $data->links() }}
            </div>
        </div>
