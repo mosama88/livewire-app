@@ -1,5 +1,5 @@
 @extends('dashboard.layouts.master')
-
+@section('home-active', 'active')
 
 @section('content-dashbard')
     <div class="row">

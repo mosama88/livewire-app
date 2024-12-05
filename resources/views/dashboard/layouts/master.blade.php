@@ -51,6 +51,11 @@
 
         <div class="container-xxl flex-grow-1 container-p-y">
     
+          @if (Route::is('dashboard.index'))
+@else
+<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">@yield('dashboard-page') /</span> @yield('dashboard-pageDesc')</h4>
+@endif
+
 
 @yield('content-dashbard')
 
