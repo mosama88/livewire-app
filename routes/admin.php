@@ -15,6 +15,8 @@ Route::prefix('/dashboard/')->name('dashboard.')->group(function(){
         // Settings
     Route::get('/settings',[SettingController::class,'index'])->name('settings');
     Route::view('/settings/edit', 'dashboard.settings.edit')->name('settings.edit');
+        // Skills
+    Route::view('/skills/edit', 'dashboard.skills.index')->name('skills');
 
         
     });
