@@ -10,7 +10,8 @@
             <div class="card mb-4">
                 <div class="card-header d-flex justify-content-between align-items-center">
                     <h5 class="mb-0">
-                        <a href="{{ route('dashboard.settings.edit') }}" type="button" class="btn btn-info">Edit</a>
+                        <a href="{{ route('dashboard.settings.edit') }}" type="button" class="btn btn-info">Edit <i
+                                class='bx bx-edit-alt ml-2'></i></a>
                     </h5>
                     <small class="text-muted float-end">Settings Website</small>
                 </div>
