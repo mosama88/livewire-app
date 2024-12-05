@@ -3,7 +3,7 @@
 
 
         @if (session()->has('message'))
-            <div class="alert alert-primary" role="alert">
+            <div class="alert alert-primary" id="my-success-alert" role="alert">
                 {{ session('message') }}
             </div>
         @endif
@@ -90,12 +90,16 @@
         </div>
 
     </div>
-    <button class="btn btn-primary d-grid d-flex align-items-center justify-content-center" type="submit">
-        <div wire:loading.remove>
-            Update
-        </div>
-        <div class="spinner-border text-secondary ms-2" wire:loading wire:target="submit" role="status">
-            <span class="visually-hidden">Updating...</span>
-        </div>
-    </button>
+    <div class="row">
+        <button class="col-3 btn btn-primary m-auto d-grid d-flex align-items-center justify-content-center"
+            type="submit">
+            <div wire:loading.remove>
+                Update
+            </div>
+            <div class="spinner-border text-secondary ms-2" wire:loading wire:target="submit" role="status">
+                <span class="visually-hidden">Updating...</span>
+            </div>
+        </button>
+    </div>
+
 </form>

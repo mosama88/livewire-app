@@ -18,7 +18,7 @@
 
                     @livewire('dashboard.settings.update-settings')
 
-
+        
                 </div>
             </div>
         </div>
