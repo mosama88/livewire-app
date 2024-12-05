@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Dashboard\SettingController;
 
 
 
@@ -11,8 +12,9 @@ Route::prefix('/dashboard/')->name('dashboard.')->group(function(){
     Route::view('index', 'dashboard.index')->name('index');
 
         // Settings
-    Route::view('/settings', 'dashboard.settings.edit')->name('settings');
+    Route::view('/settings/edit', 'dashboard.settings.edit')->name('settings.edit');
 
+    Route::get('/settings',[SettingController::class,'index'])->name('settings');
 
 
         
