@@ -6,7 +6,7 @@ use App\Http\Controllers\Dashboard\SettingController;
 
 
 
-Route::prefix('/dashboard/')->name('dashboard.')->group(function(){
+Route::prefix('dashboard/')->name('dashboard.')->group(function(){
     Route::middleware(['admin'])->group(function () {
         
     // index
@@ -16,7 +16,7 @@ Route::prefix('/dashboard/')->name('dashboard.')->group(function(){
     Route::get('/settings',[SettingController::class,'index'])->name('settings');
     Route::view('/settings/edit', 'dashboard.settings.edit')->name('settings.edit');
         // Skills
-    Route::view('/skills/edit', 'dashboard.skills.index')->name('skills');
+    Route::view('/skills', 'dashboard.skills.index')->name('skills');
 
         
     });

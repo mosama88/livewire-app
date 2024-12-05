@@ -1,4 +1,5 @@
 @extends('dashboard.layouts.master')
+@section('title_dashboard', 'Settings-Edit')
 @section('settings-active', 'active')
 @section('dashboard-page', 'Settings')
 @section('dashboard-pageDesc', 'Edit Data')

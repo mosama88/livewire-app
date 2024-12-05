@@ -1,4 +1,5 @@
 @extends('dashboard.layouts.master')
+@section('title_dashboard', 'Skills')
 @section('skills-active', 'active')
 @section('dashboard-page', 'Skills')
 @section('dashboard-pageDesc', 'Skill Data')

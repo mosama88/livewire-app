@@ -1,6 +1,7 @@
 @extends('dashboard.layouts.master')
-@section('home-active', 'active')
+@section('title_dashboard', 'Home Dashboard')
 
+@section('home-active', 'active')
 @section('content-dashbard')
     <div class="row">
         <div class="col-lg-8 mb-4 order-0">
