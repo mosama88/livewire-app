@@ -13,7 +13,10 @@ class SkillsTable extends Component
 
     public $search="";
 
-
+  public function updatingSearch()
+    {
+        $this->resetPage();
+    }
     
     public function render()
     {
@@ -24,7 +27,7 @@ class SkillsTable extends Component
             $query->where('name','like', '%' .$this->search. '%');
         }
 
-        $data= $query->orderBy('id',"DESC")->paginate(10);
+        $data= $query->orderBy('id',"DESC")->paginate(1);
 
         return view('dashboard.skills.skills-table',compact('data'));
     }
