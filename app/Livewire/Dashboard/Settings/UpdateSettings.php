@@ -2,24 +2,25 @@
 
 namespace App\Livewire\Dashboard\Settings;
 
+use App\Models\Setting;
 use Livewire\Component;
 
 class UpdateSettings extends Component
 {
 
 
-     public $name;
-     public $address;
-     public $phone;
-     public $email;
-     public $facebook;
-     public $twitter;
-     public $linkedin;
-     public $instgram;
+     public $settings;
+
 
 
      public function submit(){
-        
+        //
+     }
+
+     public function mount(){
+        $this->settings = Setting::findOrFail(1);
+
+        dd($this->settings);
      }
 
 
