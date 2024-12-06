@@ -22,6 +22,7 @@
 
         @livewire('dashboard.skills.skills-update')
         @livewire('dashboard.skills.skills-delete')
+        @livewire('dashboard.skills.skills-show')
 
     </div>
     <!-- Basic Bootstrap Table -->
@@ -49,6 +50,10 @@
         //to open and close modal
         window.addEventListener('deleteModalToggle', event => {
             $("#deleteSkillModal").modal("toggle");
+        });
+        //to open and close modal
+        window.addEventListener('showModalToggle', event => {
+            $("#showSkillModal").modal("toggle");
         });
     </script>
 @endsection

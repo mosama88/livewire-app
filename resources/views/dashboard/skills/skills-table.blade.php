@@ -37,6 +37,11 @@
                                            </button>
                                            <div class="dropdown-menu">
                                                <a class="dropdown-item" href="#"
+                                                   wire:click.prevent="$dispatch('skillShow',{id:{{ $info->id }}})">
+                                                   <i class="fa-solid fa-eye-slash me-1"></i>
+                                                   Show
+                                               </a>
+                                               <a class="dropdown-item" href="#"
                                                    wire:click.prevent="$dispatch('skillUpdate',{id:{{ $info->id }}})">
                                                    <i class="bx bx-edit-alt me-1"></i>
                                                    Edit
