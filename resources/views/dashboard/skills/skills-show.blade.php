@@ -10,7 +10,6 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
-            <form wire:submit.prevent = 'submit'>
                 <div class="modal-body">
                     <div class="row g-2">
                         <div class="col mb-0">
@@ -29,7 +28,6 @@
                         Close
                     </button>
                 </div>
-            </form>
         </div>
     </div>
 </div>

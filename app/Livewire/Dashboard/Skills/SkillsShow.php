@@ -13,23 +13,12 @@ class SkillsShow extends Component
     protected $listeners = ['skillShow'];
 
     public function skillShow($id){
-       $this->skill =  Skill::findOrFail($id);
-       $this->name = $this->skill->name;
-       $this->progress = $this->skill->progress;
+       $recored=  Skill::findOrFail($id);
+       $this->name = $recored->name;
+       $this->progress = $recored->progress;
        $this->dispatch('showModalToggle');
-        // dd('Done Update Name Is' ." ". $UpdateSkill->name . " Your ID Is " . $UpdateSkill->id);
     }
     
-
-    
-    public function submit(){
-
-        //Hide Modal
-        $this->dispatch('showModalToggle');
-        //Refresh Page Auto Page From Skill Index And Make Listeners
-        $this->dispatch('refreshDataSkills')->to(SkillsTable::class);
-    }
-
 
     public function render()
     {
