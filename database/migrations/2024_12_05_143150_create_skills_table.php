@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 return new class extends Migration
 {
@@ -17,6 +18,42 @@ return new class extends Migration
             $table->integer('progress')->nullable();
             $table->timestamps();
         });
+
+        DB::table('skills')->insert([
+            [
+                'name' => 'Fair',
+                'progress' => '50',
+            ],
+        ]);
+
+        DB::table('skills')->insert([
+            [
+                'name' => 'Good',
+                'progress' => '60',
+            ],
+        ]);
+
+
+        DB::table('skills')->insert([
+            [
+                'name' => 'Very Good',
+                'progress' => '70',
+            ],
+        ]);
+
+        DB::table('skills')->insert([
+            [
+                'name' => 'Very Good Plus',
+                'progress' => '80',
+            ],
+        ]);
+
+        DB::table('skills')->insert([
+            [
+                'name' => 'Excellent',
+                'progress' => '90',
+            ],
+        ]);
     }
 
     /**
