@@ -9,12 +9,16 @@
             <form wire:submit.prevent="submit">
                 <div class="modal-body">
                     <div class="row">
-                        <div class="col mb-3">
+                        <div class="mb-4 text-center">
+                            <i class="fa-solid fa-triangle-exclamation fa-2xl" style="color: #c02150;"></i>
+                            Warning ! You Will Lost This Proccess
+                        </div>
+                        <div class="col mb-1">
                             <h4>Are You Sure Delete this Skill ?</h4>
-                            <span>Warning ! You Will Lost This Proccess</span>
                         </div>
                     </div>
-                    <span wire:mode="name"></span>
+
+                    <strong>{{ $name }}</strong>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">

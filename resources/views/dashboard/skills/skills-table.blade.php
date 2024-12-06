@@ -24,7 +24,7 @@
                                <?php $i++; ?>
                                <tr>
                                    <td>{{ $i }}</td>
-                                   <td><i class="fab fa-angular fa-lg text-danger me-3"></i>
+                                   <td>
                                        <strong>{{ $info->name }}</strong>
                                    </td>
                                    <td>{{ $info->progress }}</td>

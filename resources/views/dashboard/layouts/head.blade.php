@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="{{ asset('dashboard') }}/assets/vendor/fonts/boxicons.css" />
 
     <!-- Core CSS -->
+    <link rel="stylesheet" href="{{ asset('dashboard') }}/assets/css/all.min.css" />
     <link rel="stylesheet" href="{{ asset('dashboard') }}/assets/vendor/css/core.css"
         class="template-customizer-core-css" />
     <link rel="stylesheet" href="{{ asset('dashboard') }}/assets/vendor/css/theme-default.css"

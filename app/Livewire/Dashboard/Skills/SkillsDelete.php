@@ -9,17 +9,19 @@ class SkillsDelete extends Component
 {
 
 
-        public $skill;
+        public $skillDeleteRecored,$name;
         protected $listeners = ['skillDelete'];
 
         public function skillDelete($id){
-            $this->skill =  Skill::findOrFail($id);
+            $this->skillDeleteRecored =  Skill::findOrFail($id);
+            $this->name = $this->skillDeleteRecored->name;
             $this->dispatch('deleteModalToggle');
         }
 
         public function submit(){
             // Save Data
-        $this->skill->delete();
+        $this->skillDeleteRecored->delete();
+        $this->reset('skillDeleteRecored');
         //Hide Modal
         $this->dispatch('deleteModalToggle');
         //Refresh Page Auto Page From Skill Index And Make Listeners
