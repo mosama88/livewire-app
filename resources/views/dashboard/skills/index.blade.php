@@ -10,34 +10,39 @@
 
         <div class="mt-3">
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createModal">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createSkillModal">
                 <i class='bx bx-plus-medical'></i> Add New Skill
             </button>
 
             <!-- Modal -->
-
-
             @livewire('dashboard.skills.skills-create')
-
             <!-- END Modal -->
 
         </div>
+
+        @livewire('dashboard.skills.skills-update')
+
     </div>
+    <!-- Basic Bootstrap Table -->
     <div class="card mb-4">
-
         @livewire('dashboard.skills.skills-table')
-
-
     </div>
-    <!--/ Basic Bootstrap Table -->
+    <!--End Basic Bootstrap Table / -->
 
 
 @endsection
 @section('js')
     <script>
         //to open and close modal
+        // if Open will be close
+        // if Close will be open
         window.addEventListener('createModalToggle', event => {
-            $("#createModal").modal("toggle");
+            $("#createSkillModal").modal("toggle");
+        });
+
+        //to open and close modal
+        window.addEventListener('editModalToggle', event => {
+            $("#editSkillModal").modal("toggle");
         });
     </script>
 @endsection
