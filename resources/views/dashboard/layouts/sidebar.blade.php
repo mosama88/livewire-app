@@ -75,7 +75,7 @@
         <!-- Skills -->
         <li class="menu-item @yield('skills-active')">
             <a href="{{ route('dashboard.skills') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-cog"></i>
+                <i class=' menu-icon bx bxs-bar-chart-alt-2'></i>
                 <div data-i18n="Analytics">Skills</div>
             </a>
         </li>
