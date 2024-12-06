@@ -27,7 +27,7 @@ class SkillsTable extends Component
             $query->where('name','like', '%' .$this->search. '%');
         }
 
-        $data= $query->orderBy('id',"DESC")->paginate(1);
+        $data= $query->orderBy('id',"DESC")->paginate(10);
 
         return view('dashboard.skills.skills-table',compact('data'));
     }
