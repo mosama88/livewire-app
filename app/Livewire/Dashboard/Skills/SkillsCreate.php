@@ -27,7 +27,6 @@ class SkillsCreate extends Component
         $this->dispatch('createModalToggle');
         //Refresh Page Auto Page From Skill Index And Make Listeners
         $this->dispatch('refreshDataSkills')->to(SkillsTable::class);
-
     }
     
 
