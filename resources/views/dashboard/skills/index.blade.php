@@ -10,7 +10,7 @@
 
         <div class="mt-3">
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#basicModal">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createModal">
                 <i class='bx bx-plus-medical'></i> Add New Skill
             </button>
 
@@ -30,4 +30,14 @@
 
     </div>
     <!--/ Basic Bootstrap Table -->
+
+
+@endsection
+@section('js')
+    <script>
+        //to open and close modal
+        window.addEventListener('createModalToggle', event => {
+            $("#createModal").modal("toggle");
+        });
+    </script>
 @endsection

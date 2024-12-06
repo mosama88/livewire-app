@@ -1,4 +1,8 @@
-<div class="modal fade" id="basicModal" tabindex="-1" style="display: none;" aria-hidden="true">
+{{--
+ wire:ignore.self
+ For Don't Close Modal after Press Submit and investigate Validations
+ --}}
+<div class="modal fade" id="createModal" tabindex="-1" style="display: none;" aria-hidden="true" wire:ignore.self>
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -12,10 +16,16 @@
                         <div class="col mb-0">
                             <label for="emailBasic" class="form-label">Name</label>
                             <input type="text" wire:model="name" class="form-control">
+                            @error('name')
+                                <div class="alert alert-danger mt-2">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="col mb-0">
                             <label class="form-label">Progress</label>
                             <input type="text" wire:model="progress" class="form-control">
+                            @error('progress')
+                                <div class="alert alert-danger mt-2">{{ $message }}</div>
+                            @enderror
                         </div>
                     </div>
 

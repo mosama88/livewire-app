@@ -12,10 +12,12 @@ class SkillsTable extends Component
 
 
     public $search="";
+    protected $listeners = ['refreshDataSkills'=>'$refresh'];
 
   public function updatingSearch()
     {
         $this->resetPage();
+
     }
     
     public function render()
