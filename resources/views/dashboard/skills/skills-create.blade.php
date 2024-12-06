@@ -16,16 +16,12 @@
                         <div class="col mb-0">
                             <label for="emailBasic" class="form-label">Name</label>
                             <input type="text" wire:model="name" class="form-control">
-                            @error('name')
-                                <div class="alert alert-danger mt-2">{{ $message }}</div>
-                            @enderror
+                            @include('dashboard.errorValidation', ['property' => 'name'])
                         </div>
                         <div class="col mb-0">
                             <label class="form-label">Progress</label>
                             <input type="text" wire:model="progress" class="form-control">
-                            @error('progress')
-                                <div class="alert alert-danger mt-2">{{ $message }}</div>
-                            @enderror
+                            @include('dashboard.errorValidation', ['property' => 'progress'])
                         </div>
                     </div>
 

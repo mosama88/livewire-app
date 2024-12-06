@@ -12,17 +12,13 @@
             <label class="form-label" for="basic-default-fullname">Name</label>
             <input wire:model ='settings.name' type="text" class="form-control" id="basic-default-fullname"
                 placeholder="John Doe" />
-            @error('settings.name')
-                <div class="alert alert-danger mt-2">{{ $message }}</div>
-            @enderror
+            @include('dashboard.errorValidation', ['property' => 'settings.name'])
         </div>
         <div class="mb-3 col-6">
             <label class="form-label" for="basic-default-company">Address</label>
             <input wire:model ='settings.address' type="text" class="form-control" id="basic-default-company"
                 placeholder="ACME Inc." />
-            @error('settings.address')
-                <div class="alert alert-danger mt-2">{{ $message }}</div>
-            @enderror
+            @include('dashboard.errorValidation', ['property' => 'settings.address'])
         </div>
         <div class="mb-3 col-6">
             <label class="form-label" for="basic-default-email">Email</label>
@@ -32,17 +28,13 @@
                 <span class="input-group-text" id="basic-default-email2">@example.com</span>
             </div>
             <div class="form-text">You can use letters, numbers & periods</div>
-            @error('settings.email')
-                <div class="alert alert-danger mt-2">{{ $message }}</div>
-            @enderror
+            @include('dashboard.errorValidation', ['property' => 'settings.email'])
         </div>
         <div class="mb-3 col-6">
             <label class="form-label" for="basic-default-phone">Phone No</label>
             <input wire:model ='settings.phone' type="text" id="basic-default-phone" class="form-control phone-mask"
                 placeholder="658 799 8941" />
-            @error('settings.phone')
-                <div class="alert alert-danger mt-2">{{ $message }}</div>
-            @enderror
+            @include('dashboard.errorValidation', ['property' => 'settings.phone'])
         </div>
 
         <div class="mb-3 col-6">
@@ -51,9 +43,7 @@
                 <input wire:model ='settings.facebook' type="text" id="basic-default-email" class="form-control"
                     placeholder="john.doe" aria-label="john.doe" aria-describedby="basic-default-email2" />
             </div>
-            @error('settings.facebook')
-                <div class="alert alert-danger mt-2">{{ $message }}</div>
-            @enderror
+            @include('dashboard.errorValidation', ['property' => 'settings.facebook'])
         </div>
 
         <div class="mb-3 col-6">
@@ -62,9 +52,7 @@
                 <input wire:model ='settings.instgram' type="text" id="basic-default-email" class="form-control"
                     placeholder="john.doe" aria-label="john.doe" aria-describedby="basic-default-email2" />
             </div>
-            @error('settings.instgram')
-                <div class="alert alert-danger mt-2">{{ $message }}</div>
-            @enderror
+            @include('dashboard.errorValidation', ['property' => 'settings.instgram'])
         </div>
 
         <div class="mb-3 col-6">
@@ -73,9 +61,7 @@
                 <input wire:model ='settings.twitter' type="text" id="basic-default-email" class="form-control"
                     placeholder="john.doe" aria-label="john.doe" aria-describedby="basic-default-email2" />
             </div>
-            @error('settings.twitter')
-                <div class="alert alert-danger mt-2">{{ $message }}</div>
-            @enderror
+            @include('dashboard.errorValidation', ['property' => 'settings.twitter'])
         </div>
 
         <div class="mb-3 col-6">
@@ -84,9 +70,7 @@
                 <input wire:model ='settings.linkedin' type="text" id="basic-default-email" class="form-control"
                     placeholder="john.doe" aria-label="john.doe" aria-describedby="basic-default-email2" />
             </div>
-            @error('settings.linkedin')
-                <div class="alert alert-danger mt-2">{{ $message }}</div>
-            @enderror
+            @include('dashboard.errorValidation', ['property' => 'settings.linkedin'])
         </div>
 
     </div>
