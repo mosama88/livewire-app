@@ -79,6 +79,14 @@
                 <div data-i18n="Analytics">Skills</div>
             </a>
         </li>
+        
+        <!-- Subscribers -->
+        <li class="menu-item @yield('subscribers-active')">
+            <a href="{{ route('dashboard.subscribers') }}" class="menu-link">
+                <i class=' menu-icon bx bxs-bar-chart-alt-2'></i>
+                <div data-i18n="Analytics">Subscribers</div>
+            </a>
+        </li>
 
         <li class="menu-header small text-uppercase">
             <span class="menu-header-text">Pages</span>

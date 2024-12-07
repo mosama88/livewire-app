@@ -18,6 +18,9 @@ Route::prefix('dashboard/')->name('dashboard.')->group(function(){
         // Skills
     Route::view('/skills', 'dashboard.skills.index')->name('skills');
 
+    // Subscribers
+    Route::view('/subscribers', 'dashboard.subscribers.index')->name('subscribers');
+
         
     });
     
