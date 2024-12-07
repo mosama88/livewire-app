@@ -83,7 +83,7 @@
         <!-- Subscribers -->
         <li class="menu-item @yield('subscribers-active')">
             <a href="{{ route('dashboard.subscribers') }}" class="menu-link">
-                <i class=' menu-icon bx bxs-bar-chart-alt-2'></i>
+                <i class=" menu-icon fa-solid fa-envelope"></i>
                 <div data-i18n="Analytics">Subscribers</div>
             </a>
         </li>
