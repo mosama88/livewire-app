@@ -28,7 +28,7 @@
     </div>
     <!-- Basic Bootstrap Table -->
     <div class="card mb-4">
-        @livewire('dashboard.skills.skills-table')
+        @livewire('dashboard.counters.counters-table')
     </div>
     <!--End Basic Bootstrap Table / -->
 
