@@ -1,3 +1,3 @@
-<div>
-    {{-- A good traveler has no fixed plans and is not intent upon arriving. --}}
-</div>
+<x-delete-model title="Delete Counter">
+    <strong>{{ $name }}</strong>
+</x-delete-model>

@@ -39,7 +39,7 @@
                                     </button>
                                     <div class="dropdown-menu">
                                         <a class="dropdown-item" href="#"
-                                            wire:click.prevent="$dispatch('skillShow',{id:{{ $info->id }}})">
+                                            wire:click.prevent="$dispatch('CountersShow',{id:{{ $info->id }}})">
                                             <i class="fa-solid fa-eye-slash me-1"></i>
                                             Show
                                         </a>
@@ -49,7 +49,7 @@
                                             Edit
                                         </a>
                                         <a class="dropdown-item" href="#"
-                                            wire:click.prevent="$dispatch('skillDelete',{id:{{ $info->id }}})">
+                                            wire:click.prevent="$dispatch('CountersUDelete',{id:{{ $info->id }}})">
                                             <i class="bx bx-trash me-1"></i>
                                             Delete
                                         </a>
