@@ -27,7 +27,7 @@
         // if Close will be open
         //to open and close modal
         window.addEventListener('deleteModalToggle', event => {
-            $("#deleteSubscriberModal").modal("toggle");
+            $("#deleteSkillModal").modal("toggle");
         });
         //to open and close modal
         window.addEventListener('showModalToggle', event => {
