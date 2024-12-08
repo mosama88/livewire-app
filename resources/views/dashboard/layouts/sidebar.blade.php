@@ -75,16 +75,25 @@
         <!-- Skills -->
         <li class="menu-item @yield('skills-active')">
             <a href="{{ route('dashboard.skills') }}" class="menu-link">
-                <i class=' menu-icon bx bxs-bar-chart-alt-2'></i>
+                <i class='menu-icon bx bxs-bar-chart-alt-2'></i>
                 <div data-i18n="Analytics">Skills</div>
             </a>
         </li>
-        
+
         <!-- Subscribers -->
         <li class="menu-item @yield('subscribers-active')">
             <a href="{{ route('dashboard.subscribers') }}" class="menu-link">
-                <i class=" menu-icon fa-solid fa-envelope"></i>
+                <i class="menu-icon fa-solid fa-envelope"></i>
                 <div data-i18n="Analytics">Subscribers</div>
+            </a>
+        </li>
+
+
+        <!-- Counters -->
+        <li class="menu-item @yield('counters-active')">
+            <a href="{{ route('dashboard.counters') }}" class="menu-link">
+                <i class="menu-icon fa-solid fa-arrow-up-1-9"></i>
+                <div data-i18n="Analytics">Counters</div>
             </a>
         </li>
 

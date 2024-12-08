@@ -21,6 +21,9 @@ Route::prefix('dashboard/')->name('dashboard.')->group(function(){
     // Subscribers
     Route::view('/subscribers', 'dashboard.subscribers.index')->name('subscribers');
 
+    // Counters
+    Route::view('/counters', 'dashboard.counters.index')->name('counters');
+
         
     });
     
