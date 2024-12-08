@@ -97,6 +97,15 @@
             </a>
         </li>
 
+
+        <!-- Services -->
+        <li class="menu-item @yield('services-active')">
+            <a href="{{ route('dashboard.services') }}" class="menu-link">
+                <i class="menu-icon fa-solid fa-arrow-up-1-9"></i>
+                <div data-i18n="Analytics">Services</div>
+            </a>
+        </li>
+
         <li class="menu-header small text-uppercase">
             <span class="menu-header-text">Pages</span>
         </li>

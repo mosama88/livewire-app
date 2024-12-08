@@ -23,7 +23,8 @@ Route::prefix('dashboard/')->name('dashboard.')->group(function(){
 
     // Counters
     Route::view('/counters', 'dashboard.counters.index')->name('counters');
-
+    // Services
+    Route::view('/services', 'dashboard.services.index')->name('services');
         
     });
     
