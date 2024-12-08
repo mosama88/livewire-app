@@ -11,7 +11,7 @@ class CountersTable extends Component
     use  WithPagination;
     public $search;
 
-
+protected $listeners=['refreshTableCount'=>'refresh'];
 
     public function updatingSearch(){
         $this->resetPage();

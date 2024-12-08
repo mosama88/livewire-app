@@ -16,14 +16,14 @@
             </button>
 
             <!-- Modal -->
-            @livewire('dashboard.skills.skills-create')
+            @livewire('dashboard.counters.counters-create')
             <!-- END Modal -->
 
         </div>
 
-        @livewire('dashboard.skills.skills-update')
-        @livewire('dashboard.skills.skills-delete')
-        @livewire('dashboard.skills.skills-show')
+        @livewire('dashboard.counters.counters-update')
+        @livewire('dashboard.counters.counters-delete')
+        @livewire('dashboard.counters.counters-show')
 
     </div>
     <!-- Basic Bootstrap Table -->
