@@ -9,7 +9,7 @@
     <div class="col-6 my-3">
 
         @livewire('dashboard.subscribers.subscribers-delete')
-        @livewire('dashboard.subscribers.subscribers-show')
+
 
     </div>
     <!-- Basic Bootstrap Table -->
@@ -29,9 +29,6 @@
         window.addEventListener('deleteModalToggle', event => {
             $("#deleteSkillModal").modal("toggle");
         });
-        //to open and close modal
-        window.addEventListener('showModalToggle', event => {
-            $("#showSubscriberModal").modal("toggle");
-        });
+
     </script>
 @endsection
