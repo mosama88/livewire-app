@@ -11,9 +11,22 @@ class CountersTable extends Component
     use  WithPagination;
     public $search;
 
+
+
+    public function updatingSearch(){
+        $this->resetPage();
+    }
+
+
     public function render()
     {   
-        $data = Counter::select("*")->orderBy('id','DESC')->paginate(10);
+
+        $query = (new Counter())->query();
+
+        if($this->search){
+            $query->where('name','like','%'.$this->search.'%')->orwhere('count','like','%'.$this->search.'%');
+        }
+        $data = $query->orderBy('id','DESC')->paginate(10);
 
         return view('dashboard.counters.counters-table',compact('data'));
     }
