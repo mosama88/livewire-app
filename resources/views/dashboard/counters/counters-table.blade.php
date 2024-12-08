@@ -44,7 +44,7 @@
                                             Show
                                         </a>
                                         <a class="dropdown-item" href="#"
-                                            wire:click.prevent="$dispatch('skillUpdate',{id:{{ $info->id }}})">
+                                            wire:click.prevent="$dispatch('CountersUpdate',{id:{{ $info->id }}})">
                                             <i class="bx bx-edit-alt me-1"></i>
                                             Edit
                                         </a>

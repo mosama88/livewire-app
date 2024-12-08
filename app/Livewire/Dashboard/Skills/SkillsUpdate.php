@@ -17,6 +17,7 @@ class SkillsUpdate extends Component
        $this->skill =  Skill::findOrFail($id);
        $this->name = $this->skill->name;
        $this->progress = $this->skill->progress;
+       $this->resetValidation();
        $this->dispatch('editModalToggle');
         // dd('Done Update Name Is' ." ". $UpdateSkill->name . " Your ID Is " . $UpdateSkill->id);
     }
