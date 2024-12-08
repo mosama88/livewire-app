@@ -12,9 +12,18 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('services', function (Blueprint $table) {
-            $table->id();
+                 $table->id();
+            $table->string('name')->nullable();
+            $table->string('icon')->nullable();
+            $table->text('description')->nullable();
             $table->timestamps();
         });
+        DB::table('services')->insert([
+            ['id' => 2, 'name' => 'Years Experience', 'icon' => Experience, 'description' => null, 'created_at' => null, 'updated_at' => null],
+            ['id' => 3, 'name' => "Team Members", 'icon' => Experience, 'description' => null, 'created_at' => null, 'updated_at' => null],
+            ['id' => 4, 'name' => "Satisfied Clients", 'icon' => 4000, 'description' => null, 'created_at' => null, 'updated_at' => null],
+            ['id' => 5, 'name' => "Compleate Projects", 'icon' => 5000, 'description' => null, 'created_at' => null, 'updated_at' => null],
+        ]);
     }
 
     /**
