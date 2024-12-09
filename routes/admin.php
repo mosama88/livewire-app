@@ -31,7 +31,7 @@ Route::prefix('dashboard/')->name('dashboard.')->group(function(){
     Route::view('/messages', 'dashboard.messages.index')->name('messages');
 
     // Category
-    Route::view('/categories', 'dashboard.categories.index')->name('categories');
+    Route::view('/categories', 'dashboard.category.index')->name('categories');
     
     });
     

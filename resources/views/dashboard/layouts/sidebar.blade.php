@@ -112,6 +112,16 @@
                 <i class="menu-icon fa-solid fa-message"></i>
                 <div data-i18n="Analytics">Messages</div>
             </a>
+        </li>
+
+
+                <!-- Categories -->
+                <li class="menu-item @yield('categories-active')">
+                    <a href="{{ route('dashboard.categories') }}" class="menu-link">
+                        <i class="menu-icon fa-solid fa-list"></i>
+                        <div data-i18n="Analytics">Categories</div>
+                    </a>
+                </li>
 
         <li class="menu-header small text-uppercase">
             <span class="menu-header-text">Pages</span>
