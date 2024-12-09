@@ -18,6 +18,9 @@ class ProjectDelete extends Component
     }
 
     public function submit(){
+
+            unlink( $this->ProjectDeleteRecored->image);
+        
         // Save Data
     $this->ProjectDeleteRecored->delete();
     $this->reset('ProjectDeleteRecored');

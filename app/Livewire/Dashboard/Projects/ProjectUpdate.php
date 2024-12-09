@@ -39,7 +39,7 @@ class ProjectUpdate extends Component
      }
 
     public function submit(){
-        $data = $this->validate();
+        $data = $this->validate($this->rules(),[],$this->attributes()); 
         if($this->image){
             unlink($this->updateData->image);
 
