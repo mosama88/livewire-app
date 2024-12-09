@@ -4,6 +4,7 @@ namespace App\Livewire\Dashboard\Messages;
 
 use App\Models\Message;
 use Livewire\Component;
+use App\Livewire\Dashboard\Messages\MessagesTable;
 
 class MessagesShow extends Component
 {
@@ -19,8 +20,10 @@ class MessagesShow extends Component
        $this->email = $recored->email;
        $this->subject = $recored->subject;
        $this->message = $recored->message;
-       $this->status = $recored->status;
+       $recored->update(['status'=>'1']); 
        $this->dispatch('showModalToggle');
+       $this->dispatch('refreshTableMessage')->to(MessagesTable::class);
+
     }
     
 

@@ -12,7 +12,7 @@ class MessagesTable extends Component
     use  WithPagination;
     public $search;
 
-protected $listeners=['refreshTablemessage'=>'refresh'];
+protected $listeners=['refreshTableMessage'=>'refresh'];
 
     public function updatingSearch(){
         $this->resetPage();
@@ -25,7 +25,7 @@ protected $listeners=['refreshTablemessage'=>'refresh'];
         $query = (new Message())->query();
 
         if($this->search){
-            $query->where('name','like','%'.$this->search.'%')->orwhere('description','like','%'.$this->search.'%')->orwhere('email','like','%'.$this->search.'%');
+            $query->where('name','like','%'.$this->search.'%')->orwhere('email','like','%'.$this->search.'%')->orwhere('subject','like','%'.$this->search.'%');
         }
         $data = $query->orderBy('id','DESC')->paginate(10);
         return view('dashboard.messages.messages-table',compact('data'));
