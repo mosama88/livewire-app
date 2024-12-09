@@ -1,3 +1,3 @@
-<div>
-    {{-- Because she competes with no one, no one can compete with her. --}}
-</div>
+<x-delete-model title="Delete Service">
+    <strong>{{ $name }}</strong>
+</x-delete-model>

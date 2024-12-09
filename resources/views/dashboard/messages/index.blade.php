@@ -18,7 +18,7 @@
     </div>
     <!-- Basic Bootstrap Table -->
     <div class="card mb-4">
-        @livewire('dashboard.messages.service-table')
+        @livewire('dashboard.messages.messages-table')
     </div>
     <!--End Basic Bootstrap Table / -->
 
