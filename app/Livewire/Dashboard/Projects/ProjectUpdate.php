@@ -4,13 +4,14 @@ namespace App\Livewire\Dashboard\Projects;
 
 use App\Models\Project;
 use Livewire\Component;
+use App\Models\Category;
 use App\Http\Requests\Dashboard\ProjectRequest;
 
 class ProjectUpdate extends Component
 {
 
     public $updateData;
-    public $name,$link,$image,$description,$category_id;
+    public $name,$link,$image,$description,$category_id,$categories;
     protected $listeners = ['ProjectUpdate'] ;
 
     public function ProjectUpdate($id){
@@ -23,6 +24,11 @@ class ProjectUpdate extends Component
     $this->dispatch('editModalToggle');
 
      }
+
+
+     public function mount(){
+        $this->categories = Category::all();
+    }
 
      public function rules(){
         return (new ProjectRequest())->rules();

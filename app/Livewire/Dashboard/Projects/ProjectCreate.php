@@ -4,6 +4,7 @@ namespace App\Livewire\Dashboard\Projects;
 
 use App\Models\Project;
 use Livewire\Component;
+use App\Models\Category;
 use App\Http\Requests\Dashboard\ProjectRequest;
 use App\Livewire\Dashboard\Projects\ProjectTable;
 
@@ -11,7 +12,13 @@ class ProjectCreate extends Component
 {
 
     public $project;
-    public $name,$link,$image,$description,$category_id;
+    public $name,$link,$image,$description,$category_id,$categories;
+
+
+        public function mount(){
+            $this->categories = Category::all();
+        }
+
 
         public function rules(){
         return (new ProjectRequest)->rules();
