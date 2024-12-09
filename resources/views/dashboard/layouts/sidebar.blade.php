@@ -106,6 +106,13 @@
             </a>
         </li>
 
+        <!-- Messages -->
+        <li class="menu-item @yield('messages-active')">
+            <a href="{{ route('dashboard.messages') }}" class="menu-link">
+                <i class="menu-icon fa-solid fa-message"></i>
+                <div data-i18n="Analytics">Messages</div>
+            </a>
+
         <li class="menu-header small text-uppercase">
             <span class="menu-header-text">Pages</span>
         </li>
