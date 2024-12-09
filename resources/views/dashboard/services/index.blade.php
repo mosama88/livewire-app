@@ -15,19 +15,19 @@
             </button>
 
             <!-- Modal -->
-            @livewire('dashboard.services.services-create')
+            @livewire('dashboard.services.service-create')
             <!-- END Modal -->
 
         </div>
 
-        @livewire('dashboard.services.services-update')
-        @livewire('dashboard.services.services-delete')
-        @livewire('dashboard.services.services-show')
+        @livewire('dashboard.services.service-update')
+        @livewire('dashboard.services.service-delete')
+        @livewire('dashboard.services.service-show')
 
     </div>
     <!-- Basic Bootstrap Table -->
     <div class="card mb-4">
-        @livewire('dashboard.services.services-table')
+        @livewire('dashboard.services.service-table')
     </div>
     <!--End Basic Bootstrap Table / -->
 

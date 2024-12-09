@@ -11,7 +11,7 @@ class ServiceRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -19,10 +19,11 @@ class ServiceRequest extends FormRequest
      *
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
      */
-    public function rules(): array
-    {
-        return [
-            //
+    public function rules(){
+        return[
+            'name'=>'required|string|max:50',
+            'description'=>'required',
+            'icon'=>'required',
         ];
     }
 }

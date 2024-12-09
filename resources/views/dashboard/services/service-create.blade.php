@@ -1,4 +1,4 @@
-<x-create-model title="Create New Counter">
+<x-create-model title="Create New Service">
 
     <div class="col-4 mb-0">
         <label for="emailBasic" class="form-label">Name</label>
@@ -6,9 +6,9 @@
         @include('dashboard.errorValidation', ['property' => 'name'])
     </div>
     <div class="col-4 mb-0">
-        <label class="form-label">Count</label>
-        <input type="text" wire:model="count" class="form-control">
-        @include('dashboard.errorValidation', ['property' => 'count'])
+        <label class="form-label">Description</label>
+        <input type="text" wire:model="description" class="form-control">
+        @include('dashboard.errorValidation', ['property' => 'description'])
     </div>
         <div class="col-4 mb-0">
         <label class="form-label">Icon</label>

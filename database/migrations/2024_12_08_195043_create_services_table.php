@@ -19,10 +19,10 @@ return new class extends Migration
             $table->timestamps();
         });
         DB::table('services')->insert([
-            ['id' => 2, 'name' => 'Years Experience', 'icon' => Experience, 'description' => null, 'created_at' => null, 'updated_at' => null],
-            ['id' => 3, 'name' => "Team Members", 'icon' => Experience, 'description' => null, 'created_at' => null, 'updated_at' => null],
-            ['id' => 4, 'name' => "Satisfied Clients", 'icon' => 4000, 'description' => null, 'created_at' => null, 'updated_at' => null],
-            ['id' => 5, 'name' => "Compleate Projects", 'icon' => 5000, 'description' => null, 'created_at' => null, 'updated_at' => null],
+            ['id' => 2, 'name' => 'Years Experience', 'icon' => 'Experience', 'description' => 'Experience', 'created_at' => null, 'updated_at' => null],
+            ['id' => 3, 'name' => "Team Members", 'icon' => 'Experience', 'description' => 'Members', 'created_at' => null, 'updated_at' => null],
+            ['id' => 4, 'name' => "Satisfied Clients", 'icon' => 4000, 'description' => 'Clients', 'created_at' => null, 'updated_at' => null],
+            ['id' => 5, 'name' => "Compleate Projects", 'icon' => 5000, 'description' => 'Projects', 'created_at' => null, 'updated_at' => null],
         ]);
     }
 

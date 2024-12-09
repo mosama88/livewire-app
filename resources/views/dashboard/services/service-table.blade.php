@@ -13,7 +13,7 @@
                     <tr>
                         <th>#</th>
                         <th>Name</th>
-                        <th>Count</th>
+                        <th>Description</th>
                         <th>Icon</th>
                         <th>Actions</th>
                     </tr>
@@ -28,7 +28,7 @@
                             <td>
                                 <strong>{{ $info->name }}</strong>
                             </td>
-                            <td>{{ $info->count }}</td>
+                            <td>{{ $info->description }}</td>
                             <td>{{ $info->icon }}</td>
 
                             <td>
@@ -39,17 +39,17 @@
                                     </button>
                                     <div class="dropdown-menu">
                                         <a class="dropdown-item" href="#"
-                                            wire:click.prevent="$dispatch('CountersShow',{id:{{ $info->id }}})">
+                                            wire:click.prevent="$dispatch('ServicesShow',{id:{{ $info->id }}})">
                                             <i class="fa-solid fa-eye-slash me-1"></i>
                                             Show
                                         </a>
                                         <a class="dropdown-item" href="#"
-                                            wire:click.prevent="$dispatch('CountersUpdate',{id:{{ $info->id }}})">
+                                            wire:click.prevent="$dispatch('ServicesUpdate',{id:{{ $info->id }}})">
                                             <i class="bx bx-edit-alt me-1"></i>
                                             Edit
                                         </a>
                                         <a class="dropdown-item" href="#"
-                                            wire:click.prevent="$dispatch('CountersUDelete',{id:{{ $info->id }}})">
+                                            wire:click.prevent="$dispatch('ServicesUDelete',{id:{{ $info->id }}})">
                                             <i class="bx bx-trash me-1"></i>
                                             Delete
                                         </a>
