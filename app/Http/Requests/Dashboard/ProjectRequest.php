@@ -27,4 +27,11 @@ class ProjectRequest extends FormRequest
             'image'=>'required|image|mimes:jpg,jpeg,png,gif,webp,max:2000',
         ];
     }
+
+    public function attributes(){
+        return[
+        'category_id'=>'Category',
+    ];
+
+    }
 }

@@ -5,12 +5,14 @@ namespace App\Livewire\Dashboard\Projects;
 use App\Models\Project;
 use Livewire\Component;
 use App\Models\Category;
+use Livewire\WithFileUploads;
 use App\Http\Requests\Dashboard\ProjectRequest;
 use App\Livewire\Dashboard\Projects\ProjectTable;
 
 class ProjectCreate extends Component
 {
 
+    use WithFileUploads;
     public $project;
     public $name,$link,$image,$description,$category_id,$categories;
 
@@ -24,8 +26,19 @@ class ProjectCreate extends Component
         return (new ProjectRequest)->rules();
         }
 
+        public function attributes(){
+            return (new ProjectRequest)->attributes();
+            }
+
+       
+
     public function submit(){
-       $dataCreate =  $this->validate();
+       $dataCreate =  $this->validate($this->rules(),[],$this->attributes());
+
+       //save Image 
+        $imageName=time().'.'. $this->image->getClientOriginalExtension();
+        $this->image->storeAs('images',$imageName,'public');
+        $dataCreate['image'] = $imageName;
        Project::create($dataCreate);
        $this->reset(['name','link','image','description','category_id']);
        $this->dispatch('createModalToggle');

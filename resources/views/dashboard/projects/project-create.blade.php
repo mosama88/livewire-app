@@ -21,7 +21,7 @@
         <select id="defaultSelect" wire:model="category_id" class="form-select">
             <option>select</option>
             @foreach ($categories as $cat)
-                <option value="{{ $cat->id }}">{{ $cat->name }}</option>
+                <option value="{{ $cat->id }}" wire:key="category-{{ $cat->id }}">{{ $cat->name }}</option>
             @endforeach
         </select>
         @include('dashboard.errorValidation', ['property' => 'category_id'])
@@ -30,8 +30,14 @@
     <div class="col-12 mb-0">
         <label for="formFileMultiple" class="form-label">Image</label>
         <input class="form-control" wire:model="image" type="file" id="formFileMultiple">
+        <div class="my-2" wire:loading wire:target="image">Uploading...</div>
+
         @include('dashboard.errorValidation', ['property' => 'image'])
     </div>
 
-
+    @if ($image)
+        <div class="my-3">
+            <img style="width: 100%;height:150px" src="{{ $image->temporaryUrl() }}">
+        </div>
+    @endif
 </x-create-model>

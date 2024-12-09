@@ -20,7 +20,7 @@
         <select id="defaultSelect" wire:model="category_id" class="form-select">
             <option>select</option>
             @foreach ($categories as $cat)
-                <option value="{{ $cat->id }}">{{ $cat->name }}</option>
+                <option value="{{ $cat->id }}" wire:key="category-{{ $cat->id }}">{{ $cat->name }}</option>
             @endforeach
         </select>
         @include('dashboard.errorValidation', ['property' => 'category_id'])
