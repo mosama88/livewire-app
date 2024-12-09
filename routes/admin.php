@@ -32,6 +32,9 @@ Route::prefix('dashboard/')->name('dashboard.')->group(function(){
 
     // Category
     Route::view('/categories', 'dashboard.category.index')->name('categories');
+
+        // Projects
+        Route::view('/projects', 'dashboard.projects.index')->name('projects');
     
     });
     
