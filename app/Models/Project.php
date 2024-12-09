@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Project extends Model
 {
@@ -15,12 +16,12 @@ class Project extends Model
 
 
 ##-------------------Relations
-/*
-public function department()
+
+public function category()
 {
-   return $this->belongsTo(Department::class, 'employee_department_code');
+   return $this->belongsTo(Category::class, 'category_id');
 }
-*/
+
 
 
 }

@@ -13,8 +13,9 @@
                     <tr>
                         <th>#</th>
                         <th>Name</th>
+                        <th>link</th>
                         <th>Description</th>
-                        <th>Icon</th>
+                        <th>Category</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -28,8 +29,9 @@
                             <td>
                                 <strong>{{ $info->name }}</strong>
                             </td>
+                            <td>{{ $info->link }}</td>
                             <td>{{ $info->description }}</td>
-                            <td>{{ $info->icon }}</td>
+                            <td>{{ $info->category->name }}</td>
 
                             <td>
                                 <div class="dropdown">
@@ -39,17 +41,17 @@
                                     </button>
                                     <div class="dropdown-menu">
                                         <a class="dropdown-item" href="#"
-                                            wire:click.prevent="$dispatch('ServicesShow',{id:{{ $info->id }}})">
+                                            wire:click.prevent="$dispatch('ProjectShow',{id:{{ $info->id }}})">
                                             <i class="fa-solid fa-eye-slash me-1"></i>
                                             Show
                                         </a>
                                         <a class="dropdown-item" href="#"
-                                            wire:click.prevent="$dispatch('ServicesUpdate',{id:{{ $info->id }}})">
+                                            wire:click.prevent="$dispatch('ProjectUpdate',{id:{{ $info->id }}})">
                                             <i class="bx bx-edit-alt me-1"></i>
                                             Edit
                                         </a>
                                         <a class="dropdown-item" href="#"
-                                            wire:click.prevent="$dispatch('ServicesUDelete',{id:{{ $info->id }}})">
+                                            wire:click.prevent="$dispatch('ProjectDelete',{id:{{ $info->id }}})">
                                             <i class="bx bx-trash me-1"></i>
                                             Delete
                                         </a>
