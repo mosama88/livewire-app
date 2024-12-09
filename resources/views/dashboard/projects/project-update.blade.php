@@ -1,4 +1,7 @@
 <x-edit-model title="Update Service">
+    {{-- <img src="{{asset($image)}}" wire:model="image" style="width: 50px;height:50px" alt=""> --}}
+
+
     <div class="col-12 mb-0">
         <label for="emailBasic" class="form-label">Name</label>
         <input type="text" wire:model="name" class="form-control">
@@ -29,6 +32,14 @@
     <div class="col-12 mb-0">
         <label for="formFileMultiple" class="form-label">Image</label>
         <input class="form-control" wire:model="image" type="file" id="formFileMultiple">
+        <div class="my-2" wire:loading wire:target="image">Uploading...</div>
+
         @include('dashboard.errorValidation', ['property' => 'image'])
     </div>
+
+    @if ($image)
+        <div class="my-3">
+            <img style="width: 100%;height:150px" src="{{ $image->temporaryUrl() }}">
+        </div>
+    @endif
 </x-edit-model>
