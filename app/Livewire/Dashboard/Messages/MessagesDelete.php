@@ -27,7 +27,7 @@ class MessagesDelete extends Component
     //Hide Modal
     $this->dispatch('deleteModalToggle');
     //Refresh Page Auto Page From counter Index And Make Listeners
-    $this->dispatch('refreshTablemessage')->to(MessagesTable::class);
+    $this->dispatch('refreshTableMessage')->to(MessagesTable::class);
 }
 
 
