@@ -8,6 +8,7 @@ use App\Models\Category;
 use Livewire\WithFileUploads;
 use App\Http\Requests\Dashboard\ProjectRequest;
 use App\Livewire\Dashboard\Projects\ProjectTable;
+use Illuminate\Support\Facades\Storage;
 
 class ProjectCreate extends Component
 {
@@ -38,7 +39,7 @@ class ProjectCreate extends Component
        //save Image 
         $imageName=time().'.'. $this->image->getClientOriginalExtension();
         $this->image->storeAs('images',$imageName,'public');
-        $dataCreate['image'] = $imageName;
+        $dataCreate['image'] = 'storage/images/'. $imageName;
        Project::create($dataCreate);
        $this->reset(['name','link','image','description','category_id']);
        $this->dispatch('createModalToggle');

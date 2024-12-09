@@ -23,6 +23,7 @@ class ProjectRequest extends FormRequest
         return[
             'name'=>'required|string|max:50',
             'link'=>'required|url',
+            'description'=>'nullable',
             'category_id'=>'required|exists:categories,id',
             'image'=>'required|image|mimes:jpg,jpeg,png,gif,webp,max:2000',
         ];

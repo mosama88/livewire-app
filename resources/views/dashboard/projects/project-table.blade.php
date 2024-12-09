@@ -6,7 +6,7 @@
                 aria-describedby="inputGroup-sizing-default">
         </div>
     </div>
-    <div class="text-nowrap">
+    <div class="table-responsive text-nowrap">
         @if (count($data) > 0)
             <table class="table">
                 <thead>
@@ -16,6 +16,7 @@
                         <th>link</th>
                         <th>Description</th>
                         <th>Category</th>
+                        <th>photo</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -32,7 +33,10 @@
                             <td>{{ $info->link }}</td>
                             <td>{{ $info->description }}</td>
                             <td>{{ $info->category->name }}</td>
+                        <td>
+                            <img src="{{asset($info->image)}}" style="width: 50px;height:50px" alt="">
 
+                        </td>
                             <td>
                                 <div class="dropdown">
                                     <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
